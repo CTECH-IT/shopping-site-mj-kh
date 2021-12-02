@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* everything */
+:root {
+    --standard-padding: 1.5vw
+}
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* gallery */
+gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: var(--standard-padding);
+    box-sizing: border-box;
+}
+
+/* Gallery Item */
+gallery > galleryItem {
+    padding: var(--standard-padding);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    height: 50vh;
+    margin-bottom: var(--standard-padding);
+    justify-content: space-between;
+}
+
+gallery > galleryItem > img {
+    width: 15vw;
+    height: 15vw;
+    object-fit: cover;
+}
+
+gallery > galleryItem > about {
+    font-size: 0.75em;
+}
+
+gallery > galleryItem > price {
+    color: #2ecc71;
+}
+
+/* checkout MODAL */
+
+cartMODAL {
+    position: fixed;
+    bottom:var(--standard-sizing);
+    right:var(--standard-sizing);
+    background-color: yellow;
+}
