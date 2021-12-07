@@ -15,6 +15,13 @@ html, body{
     font-family: 'Poppins', sans-serif;
 }
 
+button {
+    cursor: pointer;
+    background: 0;
+    border: 1px solid black;
+    padding: 0.5vmax 0 0.5vmax 0;
+}
+
 /* gallery */
 gallery {
     display: flex;
@@ -43,6 +50,15 @@ gallery > galleryItem > img {
     object-fit: cover;
 }
 
+gallery > galleryItem > is {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+            line-clamp: 1; 
+    -webkit-box-orient: vertical;
+}
+
 gallery > galleryItem > about {
     font-size: 0.75em;
     overflow: hidden;
@@ -63,26 +79,115 @@ gallery > galleryItem > price {
     -webkit-box-orient: vertical;
 }
 
-gallery > galleryItem > button {
-    padding: 0.5vmax 0 0.5vmax 0;
-    background: white;
-    border: 1px solid black;
+gallery > galleryItem > div {
+    display: flex;
 }
 
-gallery > galleryItem > is {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-            line-clamp: 1; 
-    -webkit-box-orient: vertical;
+gallery > galleryItem > div > button {
+    width: 45%;
+    margin-right: 5%;
+    color: red;
+    border: 1px solid red;
 }
 
-/* checkout MODAL */
+gallery > galleryItem > div > div {
+    display: flex;
+    width: 50%; 
+}
+
+gallery > galleryItem > div > div > input {
+    width: 60%;
+    text-align: center;
+}
+gallery > galleryItem > div > div > button {
+    width: 20%;
+}
+
+
+/* cart MODAL */
 
 cartMODAL {
     position: fixed;
-    bottom:var(--standard-sizing);
-    right:var(--standard-sizing);
-    background-color: yellow;
+    display: flex;
+    bottom:var(--standard-padding);
+    right:var(--standard-padding);
+    border-radius: 1vmax;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: white;
+    padding: var(--standard-padding);
+    box-sizing: border-box;
+    width: 25vw;
+    height: 40vh;
+    flex-direction: column;
+}
+
+cartMODAL > items {
+    flex: 1;
+    overflow-y: scroll;
+    margin-bottom: 1vmax;
+    margin-top: 1vmax;
+}
+
+cartMODAL > information {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+cartMODAL > information > price {
+    color: #2ecc71;
+}
+
+cartMODAL > information > button {
+    padding: 0.5vmax 1vmax 0.5vmax 1vmax;
+}
+
+/* cart MODAL Item */
+
+cartItem {
+    display: flex;
+    align-items: center;
+    padding: var(--standard-padding);
+    height: 7.5vmax;
+    box-sizing: border-box;
+}
+
+cartItem > img {
+    height: 100%;
+    width: 18.75%;
+    object-fit: cover;
+}
+
+cartItem > nameprice {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5vmax;
+    width: 62.5%;
+    box-sizing: border-box;
+}
+cartItem > nameprice > price {
+    color: #2ecc71;
+}
+cartItem > nameprice > is {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+            line-clamp: 2; 
+    -webkit-box-orient: vertical;
+}
+
+cartItem > quantity {
+    display: flex;
+    height: 50%;
+    width: 18.75%;
+}
+
+cartItem > quantity > input {
+    width: 60%;
+    text-align: center;
+}
+cartItem > quantity > button {
+    width: 20%;
 }
