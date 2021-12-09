@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 /* everything */
+
 :root {
     --standard-padding: 1.5vw
 }
 
-html, body{
+html,
+body {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
@@ -22,7 +24,9 @@ button {
     padding: 0.5vmax 0 0.5vmax 0;
 }
 
+
 /* gallery */
+
 gallery {
     display: flex;
     flex-wrap: wrap;
@@ -31,8 +35,10 @@ gallery {
     box-sizing: border-box;
 }
 
+
 /* Gallery Item */
-gallery > galleryItem {
+
+gallery>galleryItem {
     padding: var(--standard-padding);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
@@ -44,62 +50,63 @@ gallery > galleryItem {
     justify-content: space-between;
 }
 
-gallery > galleryItem > img {
+gallery>galleryItem>img {
     width: 15vw;
     height: 15vw;
     object-fit: cover;
 }
 
-gallery > galleryItem > is {
+gallery>galleryItem>is {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 1;
-            line-clamp: 1; 
+    line-clamp: 1;
     -webkit-box-orient: vertical;
 }
 
-gallery > galleryItem > about {
+gallery>galleryItem>about {
     font-size: 0.75em;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3;
-            line-clamp: 3; 
+    line-clamp: 3;
     -webkit-box-orient: vertical;
 }
 
-gallery > galleryItem > price {
+gallery>galleryItem>price {
     color: #2ecc71;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 1;
-            line-clamp: 1; 
+    line-clamp: 1;
     -webkit-box-orient: vertical;
 }
 
-gallery > galleryItem > div {
+gallery>galleryItem>div {
     display: flex;
 }
 
-gallery > galleryItem > div > button {
+gallery>galleryItem>div>button {
     width: 45%;
     margin-right: 5%;
     color: red;
     border: 1px solid red;
 }
 
-gallery > galleryItem > div > div {
+gallery>galleryItem>div>div {
     display: flex;
-    width: 50%; 
+    width: 50%;
 }
 
-gallery > galleryItem > div > div > input {
+gallery>galleryItem>div>div>input {
     width: 60%;
     text-align: center;
 }
-gallery > galleryItem > div > div > button {
+
+gallery>galleryItem>div>div>button {
     width: 20%;
 }
 
@@ -109,8 +116,8 @@ gallery > galleryItem > div > div > button {
 cartMODAL {
     position: fixed;
     display: flex;
-    bottom:var(--standard-padding);
-    right:var(--standard-padding);
+    bottom: var(--standard-padding);
+    right: var(--standard-padding);
     border-radius: 1vmax;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background: white;
@@ -121,27 +128,27 @@ cartMODAL {
     flex-direction: column;
 }
 
-cartMODAL > items {
+cartMODAL>items {
     flex: 1;
     overflow-y: scroll;
     margin-bottom: 1vmax;
     margin-top: 1vmax;
 }
 
-cartMODAL > information {
+cartMODAL>information {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
-cartMODAL > information > price {
+cartMODAL>information>price {
     color: #2ecc71;
 }
 
-cartMODAL > information > button {
+cartMODAL>information>button {
     padding: 0.5vmax 1vmax 0.5vmax 1vmax;
 }
+
 
 /* cart MODAL Item */
 
@@ -153,41 +160,44 @@ cartItem {
     box-sizing: border-box;
 }
 
-cartItem > img {
-    height: 100%;
-    width: 18.75%;
+cartItem>img {
+    height: 5.5vmax;
+    width: 5.5vmax;
     object-fit: cover;
 }
 
-cartItem > nameprice {
+cartItem>nameprice {
     display: flex;
     flex-direction: column;
     padding: 0.5vmax;
     width: 62.5%;
     box-sizing: border-box;
 }
-cartItem > nameprice > price {
+
+cartItem>nameprice>price {
     color: #2ecc71;
 }
-cartItem > nameprice > is {
+
+cartItem>nameprice>is {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;
-            line-clamp: 2; 
+    line-clamp: 2;
     -webkit-box-orient: vertical;
 }
 
-cartItem > quantity {
+cartItem>quantity {
     display: flex;
     height: 50%;
-    width: 18.75%;
+    width: 20%;
 }
 
-cartItem > quantity > input {
-    width: 60%;
+cartItem>quantity>input {
+    width: 50%;
     text-align: center;
 }
-cartItem > quantity > button {
-    width: 20%;
+
+cartItem>quantity>button {
+    width: 25%;
 }
