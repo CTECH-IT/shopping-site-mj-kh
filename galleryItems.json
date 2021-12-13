@@ -6,6 +6,13 @@
         "price": "16"
     },
     {
+        "id": "coat6969",
+        "picture": "/img/coat.jpg",
+        "name": "Coat",
+        "description": "coat thing with description boom boom pow boom pow pop boom borit irt irejt ijeritjeitj erjiuewi ruwuier n super cool epic hot coat for hot people.",
+        "price": "100"
+    },
+    {
         "id": "cat1",
         "picture": "/img/cat.webp",
         "name": "Cat",
