@@ -228,5 +228,6 @@ window.addEventListener('load', async() => {
 
     function checkOut() {
         // ONLY SEND IDS AND AMOUNTS TO THE SERVER, CALCULATE COST, ETC ON SERVER
+        //if quantity >= 1
     }
 });

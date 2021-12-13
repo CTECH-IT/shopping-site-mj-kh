@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root {
+    --standard-padding: 1.5vw
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+orders {
+    padding: var(--standard-padding);
+    box-sizing: border-box;
+}
+
+order {
+    padding: var(--standard-padding);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+order>items {
+    margin-bottom: 10px;
+}
+
+order>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+order>div>price {
+    color: #2ecc71;
+}
+
+order>div>div {
+    display: flex;
+}
+
+order button {
+    padding: 0.5vmax 2vmax 0.5vmax 2vmax;
+    background: none;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+order>div>div>button:first-of-type {
+    margin-right: 10px;
+}
