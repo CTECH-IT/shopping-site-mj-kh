@@ -7,24 +7,6 @@ const port = 3000;
 
 app.use(express.static('public'));
 
-/*
-fetch("/api/v1/people?type=all") await the response
-then with the response .json() await
-use data how you please
-*/
-
-/*
-
-    const res = await fetch("api/updatePerson?id="+personToUpdate, {
-        method: 'POST',
-        headers: {
-            updatedperson: JSON.stringify(all[personToUpdate])
-        } 
-    })
-
-    https://www.sitepoint.com/get-url-parameters-with-javascript/
-    
-*/
 app.post('/api/removeID', (req, res) => {
     const key = req.query.id;
     delete jsonData[key];
