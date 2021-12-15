@@ -19,14 +19,20 @@ window.addEventListener('load', async() => {
     const res = await fetch('/galleryItems.json');
     const items = await res.json();
 
-    for (item of Object.values(items)) {
-        const element = createGalleryItem(item);
-        GALLERY.append(element);
+    const itemObjects = Object.values(items);
+    if (itemObjects.length == 0) {
+        GALLERY.innerText = 'Failed to load items';
+    } else {
+        for (item of itemObjects) {
+            const element = createGalleryItem(item);
+            GALLERY.append(element);
+        }
     }
 
     var checkoutButton = document.getElementById('checkout');
 
     checkoutButton.addEventListener('click', () => {
+        if (checkoutButton.disabled == true) return;
         checkOut();
     });
 
@@ -238,7 +244,7 @@ window.addEventListener('load', async() => {
             order.items.push({ id: item.id, quantity: item.quantity });
         }
 
-        checkoutButton.setAttribute('disabled');
+        checkoutButton.disabled = true;
 
         const res = await fetch('/api/updateID?id=' + order.id, {
             method: 'POST',
@@ -246,8 +252,16 @@ window.addEventListener('load', async() => {
                 json: JSON.stringify(order)
             }
         });
-        if (await res.ok()) {} else {}
-        checkoutButton.removeAttribute('disabled');
-        console.log(await res.text());
+        const text = await res.text();
+        if (text == 'OK') {
+            for (id of Object.keys(cart)) {
+                removeFromCart(id);
+            }
+            GALLERY.innerText = 'Checkout successful, Admins please check orders page (/orders)';
+        } else {
+            GALLERY.innerText = 'failed lol';
+        }
+        checkoutButton.disabled = false;
+        console.log(text);
     }
 });

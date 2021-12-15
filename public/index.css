@@ -24,13 +24,18 @@ button {
     padding: 0.5vmax 0 0.5vmax 0;
 }
 
+button:hover {
+    background: black;
+    color: white;
+}
+
 
 /* gallery */
 
 gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: var(--standard-padding);
     box-sizing: border-box;
 }
@@ -38,25 +43,25 @@ gallery {
 
 /* Gallery Item */
 
-gallery>galleryItem {
+galleryItem {
     padding: var(--standard-padding);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    width: 15vw;
-    height: 50vh;
+    width: 300px;
+    height: 450px;
     margin-bottom: var(--standard-padding);
     justify-content: space-between;
 }
 
-gallery>galleryItem>img {
-    width: 15vw;
-    height: 15vw;
+galleryItem>img {
+    width: 300px;
+    height: 300px;
     object-fit: cover;
 }
 
-gallery>galleryItem>is {
+galleryItem>is {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -65,7 +70,7 @@ gallery>galleryItem>is {
     -webkit-box-orient: vertical;
 }
 
-gallery>galleryItem>about {
+galleryItem>about {
     font-size: 0.75em;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -75,7 +80,7 @@ gallery>galleryItem>about {
     -webkit-box-orient: vertical;
 }
 
-gallery>galleryItem>price {
+galleryItem>price {
     color: #2ecc71;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -85,28 +90,33 @@ gallery>galleryItem>price {
     -webkit-box-orient: vertical;
 }
 
-gallery>galleryItem>div {
+galleryItem>div {
     display: flex;
 }
 
-gallery>galleryItem>div>button {
+galleryItem>div>button {
     width: 45%;
     margin-right: 5%;
     color: red;
     border: 1px solid red;
 }
 
-gallery>galleryItem>div>div {
+galleryItem>div>button:hover {
+    color: white;
+    background: red;
+}
+
+galleryItem>div>div {
     display: flex;
     width: 50%;
 }
 
-gallery>galleryItem>div>div>input {
+galleryItem>div>div>input {
     width: 60%;
     text-align: center;
 }
 
-gallery>galleryItem>div>div>button {
+galleryItem>div>div>button {
     width: 20%;
 }
 
@@ -123,8 +133,8 @@ cartMODAL {
     background: white;
     padding: var(--standard-padding);
     box-sizing: border-box;
-    width: 25vw;
-    height: 40vh;
+    width: 400px;
+    height: 200px;
     flex-direction: column;
 }
 

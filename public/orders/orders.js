@@ -20,8 +20,13 @@ window.addEventListener('load', async() => {
 
     const orderContainer = document.querySelector('orders');
 
-    for (order of Object.values(orders)) {
-        orderContainer.append(createOrder(order));
+    const orderObjects = Object.values(orders);
+    if (orderObjects.length == 0) {
+        orderContainer.innerText = 'There are no orders to review at this time.';
+    } else {
+        for (order of orderObjects) {
+            orderContainer.append(createOrder(order));
+        }
     }
 });
 
